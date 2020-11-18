@@ -2,6 +2,7 @@ import random
 import time
 from IS import insertionSort
 from QS import quicksort
+from Selection import selection_sort
 
 
 def Qsort():
@@ -31,6 +32,8 @@ def Qsort():
         print("***********")
 
 
+
+
 ini = time.time()
 Qsort()
 fim = time.time()
@@ -39,7 +42,13 @@ print("Tempo de Execução do QuickSort: ", fim-ini)
 arr = [117, 90, 88, 83, 81, 77, 74, 69, 64, 63, 51,
                 50, 49, 42, 41, 34, 32, 29, 28, 22, 16, 8, 6, 5, 3, 1]
 
+
 ini_dois = time.time()
 insertionSort(arr)
 fim_dois = time.time()
-print("Tempo de Execução do insertionSort ", fim_dois-ini_dois)
+print("Tempo de Execução do InsertionSort ", fim_dois-ini_dois)
+
+ini_tres = time.time()
+selection_sort(arr)
+fim_tres = time.time()
+print("Tempo de Execução do SelectionSort ", fim_tres-ini_tres)
